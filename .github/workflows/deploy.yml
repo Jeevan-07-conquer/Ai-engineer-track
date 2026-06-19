@@ -2,7 +2,7 @@ name: Deploy React TSX Site
 
 on:
   push:
-    branches: ["main"] # Change to "master" if your default branch is named master
+    branches: ["main"] # If your default branch is called 'master', change "main" to "master"
 
 permissions:
   contents: read
@@ -38,7 +38,7 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Change to './build' if using Create React App
+          path: './dist' # This targets the folder Vite creates
 
       - name: Deploy to GitHub Pages
         id: deployment
